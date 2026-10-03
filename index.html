@@ -8,9 +8,12 @@
 <body>
     <div id="h5p-container"></div>
     <script>
+        const params = new URLSearchParams(window.location.search);
+        const ovning = params.get('ex') || 'FV/FVG/FVG1';
+
         const el = document.getElementById('h5p-container');
         const options = {
-            h5pJsonPath: 'workspace/ovningar/FV/FVG/FVG1',
+            h5pJsonPath: 'workspace/ovningar/' + ovning,
             frameJs: 'dist/frame.bundle.js',
             frameCss: 'dist/styles/h5p.css',
         };
